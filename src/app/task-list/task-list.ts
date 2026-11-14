@@ -1,0 +1,17 @@
+import { DatePipe, UpperCasePipe } from '@angular/common';
+import { Component } from '@angular/core';
+import { TitleColorPipe } from '../pipes/title-color-pipe';
+
+@Component({
+  selector: 'app-task-list',
+  imports: [UpperCasePipe, DatePipe, TitleColorPipe],
+  templateUrl: './task-list.html',
+  styleUrl: './task-list.scss',
+})
+export class TaskList {
+  tasks: { id: number; title: string; dueDate: string }[] = [
+    { id: 1, title: 'AmineAmineAmineAmineAmine', dueDate: '2026-11-15' },
+    { id: 1, title: 'Amine', dueDate: '2026-11-15' },
+    { id: 1, title: 'Amine', dueDate: '2026-11-15' },
+  ];
+}
