@@ -1,0 +1,9 @@
+<header>
+  <h2>Catalogue</h2>
+</header>
+
+<section>
+  @for (p of produits(); track p.id) {
+    <app-product-card [produit]="p" (ajoute)="ajouter($event)"></app-product-card>
+  }
+</section>
